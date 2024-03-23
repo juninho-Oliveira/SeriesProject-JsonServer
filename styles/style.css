@@ -169,6 +169,7 @@ tbody>tr:nth-child(even){
 
 table,
 th,
+tr,
 td{
     margin-top: 2px;
     padding: 4px;

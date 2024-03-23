@@ -7,7 +7,8 @@
     <meta name="author" content="Junior Oliveira">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+    <script defer src="/scripts/spript.js"></script>
+
     <title>Series Project with Json-Server</title>
 </head>
 
@@ -41,26 +42,26 @@
                 <form action="" class="main-flex__form-element" id="formValidation">
                     <div class="main-flex__inputs">
                         <label for="">Informe o nome da serie</label>
-                        <input type="text" placeholder="Ex: House os the dragon" id="nomeSerie" required>
+                        <input type="text" id="nomeSerie" placeholder="Ex: House os the dragon" id="nomeSerie" required>
                     </div>
 
                     <div class="main-flex__inputs">
                         <label for="">Informe a quantidade de temporadas</label>
-                        <input type="number" placeholder="Ex: 8" id="numTemporada" required min="1" max="20">
+                        <input type="number" id="numTemporada" placeholder="Ex: 8" id="numTemporada" required min="1" max="20">
                     </div>
 
                     <div class="main-flex__inputs">
                         <label for="">Informe o nome do estudio</label>
-                        <input type="text" placeholder="Ex: HBO Max" id="nomeEstudio" required>
+                        <input type="text" id="nomeEstudio" placeholder="Ex: HBO Max" id="nomeEstudio" required>
                     </div>
 
                     <div class="main-flex__inputs">
                         <label for="">Informe o ano de lançamento</label>
-                        <input type="number" placeholder="Ex: 2012" id="anoLancamento" required max="2024">
+                        <input type="number" id="anoLancamento" placeholder="Ex: 2012" id="anoLancamento" required max="2024">
                     </div>
 
                     <div class="main-flex__button">
-                        <button type="submit" id="btncadastrar">
+                        <button type="submit" id="btncadastrar" onclick="potsSeries(event)">
                             Cadastrar Serie
                         </button>
                         <button type="reset">
@@ -86,46 +87,10 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                            <tr id="listaSeries">
-                                <!--quem vai criar os dados vai ser o javaScript-->
-                                <td>Friends</td>
-                                <td>12</td>
-                                <td>1998</td>
-                                <td>HBO</td>
+                        <tbody id="listaSeries">
+                                <!--quem vai criar os dados vai ser o javaScript
                                 <td><i class="bi bi-pencil-square"></i></td>
-                                <td><i class="bi bi-trash3"></i></td>
-                            </tr>
-
-                            <tr id="listaSeries">
-                                <!--quem vai criar os dados vai ser o javaScript-->
-                                <td>Friends</td>
-                                <td>12</td>
-                                <td>1998</td>
-                                <td>HBO</td>
-                                <td><i class="bi bi-pencil-square"></i></td>
-                                <td><i class="bi bi-trash3"></i></td>
-                            </tr>
-
-                            <tr id="listaSeries">
-                                <!--quem vai criar os dados vai ser o javaScript-->
-                                <td>Friends</td>
-                                <td>12</td>
-                                <td>1998</td>
-                                <td>HBO</td>
-                                <td><i class="bi bi-pencil-square"></i></td>
-                                <td><i class="bi bi-trash3"></i></td>
-                            </tr>
-
-                            <tr id="listaSeries">
-                                <!--quem vai criar os dados vai ser o javaScript-->
-                                <td>Friends</td>
-                                <td>12</td>
-                                <td>1998</td>
-                                <td>HBO</td>
-                                <td><i class="bi bi-pencil-square"></i></td>
-                                <td><i class="bi bi-trash3"></i></td>
-                            </tr>
+                                <td><i class="bi bi-trash3"></i></td>-->
                         </tbody>
 
                     </table>
@@ -140,7 +105,7 @@
         <section class="footer-flex">
             <h3>Mais informações:</h3>
 
-            <div class="footer-flex__listas"> 
+            <div class="footer-flex__listas">
                 <p><strong>Escola:</strong> Senai Conde José Vicente de Azevedo</p>
                 <p><strong>Telefone:</strong> (11) 99999-7654</p>
                 <p><strong>Endereço:</strong> Rua Moreira de Godói, 226, ipiranga-SP</p>
@@ -157,6 +122,8 @@
             </div>
         </section>
     </footer>
+
+    <script src="/scripts/post.js"></script>
 
 </body>
 
