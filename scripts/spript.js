@@ -13,13 +13,31 @@ document.addEventListener("DOMContentLoaded", (e) => {
       //console.log(response);
 
       const dados = await response.json();
-      //console.log(dados);
+      console.log(dados);
 
       dados.forEach((series) => {
         const listasSeries = document.getElementById("listaSeries");
 
+        console.log(series.id)
+
         const tr = document.createElement("tr");
         const div = document.createElement("div");
+
+        const editar = document.createElement('button');
+        const excluir = document.createElement('button');
+
+        div.classList.add("botoes");
+        editar.classList.add("bi", "bi-pencil-square");
+        excluir.classList.add("bi", "bi-trash3");
+        //excluir.dataset.id = series.id;
+
+        excluir.addEventListener('click', function() {
+          deleteSeries(series.id);
+        })
+
+        editar.addEventListener('click', function() {
+         EditarSeries(series.id);
+        })
 
         //realizar a criação das celulas de cada elemento
         const nomeSerie = document.createElement("td");
@@ -38,13 +56,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
         tr.appendChild(numTemporada);
         tr.appendChild(anoLancamento);
 
+        tr.appendChild(div);
+        div.appendChild(editar);
+        div.appendChild(excluir);
+
         listasSeries.appendChild(tr);
+        
+
       });
+  
     } catch (error) {
       console.log("deu erro " + error);
     }
   }
-
 
   getSeries();
 });

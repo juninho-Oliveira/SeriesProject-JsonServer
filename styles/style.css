@@ -177,6 +177,30 @@ td{
 }
 
 
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.botoes 
+button {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes 
+button:hover {
+    border: 1px solid black;
+}
+
+
+
+
 footer {
     margin-top: 7%;
     display: flex;

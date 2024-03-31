@@ -1,39 +1,18 @@
 {
   "series": [
     {
-      "nomeSeries": "nome",
-      "numTemporada": "nometemporada",
-      "nomeEstudio": "nomeestudio",
-      "anoLancamento": 2022,
-      "id": "09cd"
+      "id": "63f1",
+      "numTemporada": "10",
+      "nomeSeries": "haha",
+      "nomeEstudio": "hjf",
+      "anoLancamento": "2012"
     },
     {
-      "nomeSeries": "nome",
-      "numTemporada": "nometemporada",
-      "nomeEstudio": "nomeestudio",
-      "anoLancamento": 2022,
-      "id": "5465"
-    },
-    {
-      "nomeSeries": "nome",
-      "numTemporada": "nometemporada",
-      "nomeEstudio": "nomeestudio",
-      "anoLancamento": 2022,
-      "id": "e426"
-    },
-    {
-      "id": "8a05",
+      "id": "2215",
       "numTemporada": "2",
-      "nomeSeries": "jk",
-      "nomeEstudio": "jk",
-      "anoLancamento": "2021"
-    },
-    {
-      "id": "12ac",
-      "numTemporada": "2",
-      "nomeSeries": "junior",
+      "nomeSeries": "haha",
       "nomeEstudio": "hbo",
-      "anoLancamento": "2024"
+      "anoLancamento": "2023"
     }
   ]
 }
