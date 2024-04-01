@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         div.classList.add("botoes");
         editar.classList.add("bi", "bi-pencil-square");
         excluir.classList.add("bi", "bi-trash3");
-        //excluir.dataset.id = series.id;
 
         excluir.addEventListener('click', function() {
           deleteSeries(series.id);
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         listasSeries.appendChild(tr);
         
-
       });
   
     } catch (error) {
