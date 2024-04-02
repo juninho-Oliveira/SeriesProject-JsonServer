@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
       //console.log(response);
 
       const dados = await response.json();
-      console.log(dados);
+      //console.log(dados);
 
       dados.forEach((series) => {
         const listasSeries = document.getElementById("listaSeries");
 
-        console.log(series.id)
+        //console.log(series.id)
 
         const tr = document.createElement("tr");
         const div = document.createElement("div");
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         })
 
         editar.addEventListener('click', function() {
-         EditarSeries(series.id);
+         EditarSeries(series.id, series);
         })
 
         //realizar a criação das celulas de cada elemento

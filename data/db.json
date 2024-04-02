@@ -1,18 +1,18 @@
 {
   "series": [
     {
-      "numTemporada": "5",
-      "nomeSeries": "House",
-      "nomeEstudio": "Max",
+      "numTemporada": "10",
+      "nomeSeries": "jr",
+      "nomeEstudio": "HBO",
       "anoLancamento": "2012",
       "id": "609f"
     },
     {
-      "numTemporada": "20",
-      "nomeSeries": "Max",
+      "numTemporada": "10",
+      "nomeSeries": "house",
       "nomeEstudio": "HBO",
-      "anoLancamento": "2023",
-      "id": "b7b9"
+      "anoLancamento": "2012",
+      "id": "b822"
     }
   ]
 }
