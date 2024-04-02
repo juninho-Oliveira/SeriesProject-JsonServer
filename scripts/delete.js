@@ -1,8 +1,11 @@
 async function deleteSeries(id) {
   try {
-    await fetch(`http://localhost:8081/series/${id}`, {
-      method: 'DELETE',
-    });
+    if (true) {
+      await fetch(`https://jsonserve-p8wz.onrender.com/series/${id}`, {
+        method: "DELETE",
+      });
+      window.location.reload();
+    }
 
     const seriesToDelete = document.getElementById(`series-${id}`);
     if (seriesToDelete) {

@@ -1,7 +1,49 @@
+async function potsSeries(nome, temporada, estudio, ano) {
+  
+  const nomeSeries = nome;
+  const numTemporada = temporada;
+  const nomeEstudio = estudio;
+  const anoLancamento = ano;
 
+  //alert(` nome: ${nomeSeries}, temporada: ${numTemporada}, estudio: ${nomeEstudio}, ano: ${anoLancamento} `);
+    
 
+  try {
+    const dadosEnviados = {
+      nomeSeries: nome,
+      numTemporada: temporada,
+      nomeEstudio: estudio,
+      anoLancamento: ano,
+    };
 
-async function potsSeries(event) {
+    if (nomeSeries === "") {
+      alert("Nome da serie obrigatório!");
+    } else if (numTemporada === "") {
+      alert("Numero de temporadas obrigatório!");
+    } else if (nomeEstudio === "") {
+      alert("Nome do estudio obrigatório!");
+    } else if (anoLancamento === "") {
+      alert("ano de lançamento obrigatório!");
+    } else {
+
+      if (true) {
+        await fetch(`https://jsonserve-p8wz.onrender.com/series`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dadosEnviados),
+        });
+      }
+
+      atualizar();
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function adicionar(event) {
   event.preventDefault();
 
   const nomeSeries = document.getElementById("nomeSerie").value;
@@ -9,46 +51,9 @@ async function potsSeries(event) {
   const nomeEstudio = document.getElementById("nomeEstudio").value;
   const anoLancamento = document.getElementById("anoLancamento").value;
 
-  if (nomeSeries === "") {
-    alert('Nome da serie obrigatório!')
-  } else if (numTemporada === "") {
-    alert('Numero de temporadas obrigatório!')
-  } else if (nomeEstudio === "") {
-    alert('Nome do estudio obrigatório!')
-  } else if (anoLancamento === "") {
-    alert('ano de lançamento obrigatório!')
-  } else {
-
-    const dadosEnviados = {
-      numTemporada,
-      nomeSeries,
-      nomeEstudio,
-      anoLancamento,
-    }
-
-    const response = await fetch('http://localhost:8081/series', {
-      method: 'POST',
-      body: JSON.stringify(dadosEnviados),
-    });
-
-    /*const response = await fetch('https://jsonserve-p8wz.onrender.com/series', {
-      method: 'POST',
-      body: JSON.stringify(dadosEnviados),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      const data = await response.json();
-      console.log(data);
-    }
-    
-    //console.log(dadosEnviados)
-
-    //console.log(dadosEnviados)*/
-
-  }
-
+  potsSeries(nomeSeries, numTemporada, nomeEstudio, anoLancamento);
 }
 
-
+function atualizar() {
+  window.location.reload();
+}
