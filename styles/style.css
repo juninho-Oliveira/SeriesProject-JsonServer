@@ -228,6 +228,8 @@ footer {
 }
 
 
+/*responsivo*/
+
 @media (max-width:970px) {
 
     main {
@@ -238,7 +240,8 @@ footer {
     }
 
     main h2 {
-        font-size: 19px;
+       
+        font-size: 17px;
     }
 
     main .section-flex {
@@ -274,22 +277,26 @@ footer {
         font-size: 18px;
     } 
 
+    .main-flex__listagem-flex__table th {
+        font-size: 12px;
+    }
+
     footer {
         display: flex;
         align-items: center;
         justify-content: start;
         text-align: start;
-        flex-wrap: wrap;
-        gap: 2px;
+       /* flex-wrap: wrap;*/
+        gap: 10px;
     }
 
     .footer-flex {
-        font-size: 16px;
+        font-size: 12px;
         gap: 6px;
     }
 
     .footer-flex__listas {
-        font-size: 14px;
+        font-size: 10px;
         gap: 10px;
     }
 }
