@@ -72,3 +72,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 
+/*function mostrarMenu() {
+  const menu = document.getElementById('menu-li');
+  let img = document.getElementById('img');
+
+
+  menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "flex" : "none";
+
+  if para troca de imagem do menu
+  if (img.getAttribute("src") == "/assets/imagens/🦆 icon _share_.png") {
+    img.setAttribute("src", "/assets/imagens/🦆 icon _menu_.png");
+  } else {
+    img.setAttribute("src", "/assets/imagens/🦆 icon _share_.png");
+  }
+
+}
+
+*/
