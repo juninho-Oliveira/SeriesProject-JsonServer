@@ -238,7 +238,7 @@ footer {
     }
 
     main h2 {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     main .section-flex {
@@ -249,7 +249,17 @@ footer {
     }
 
     .main-flex {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /*border: 1px solid rgb(32, 30, 30);*/
+    }
+
+    .main-flex__form-element {
         width: 90%;
+        
     }
 
     .nav-flex__links {
@@ -259,6 +269,10 @@ footer {
     .nav-flex__elements {
         width: 90%;
     }
+
+    #title-form {
+        font-size: 18px;
+    } 
 
     footer {
         display: flex;
