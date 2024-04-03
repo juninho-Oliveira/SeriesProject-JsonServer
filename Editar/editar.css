@@ -9,3 +9,15 @@ main {
 main section {
     width: 50%;
 }
+
+
+.main-flex__button>button {
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+    background-color: darkgray;
+    width: 40%;
+    cursor: pointer;
+    font-size: 20px;
+}
