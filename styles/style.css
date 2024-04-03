@@ -139,9 +139,8 @@ input[type="number"] {
     cursor: pointer;
 }
 
-.main-flex__button>button:enabled, 
-.main-flex__button>button:enabled:active
- {
+.main-flex__button>button:enabled,
+.main-flex__button>button:enabled:active {
     background-color: var(--primary-color);
     cursor: pointer;
 }
@@ -152,7 +151,7 @@ input[type="number"] {
     width: 100%;
 }
 
-.main-flex__listagem-flex{
+.main-flex__listagem-flex {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -162,7 +161,7 @@ input[type="number"] {
 }
 
 
-tbody>tr:nth-child(even){
+tbody>tr:nth-child(even) {
     background-color: var(--primary-color);
     color: white;
 }
@@ -170,7 +169,7 @@ tbody>tr:nth-child(even){
 table,
 th,
 tr,
-td{
+td {
     margin-top: 2px;
     padding: 4px;
     border-collapse: collapse;
@@ -185,16 +184,14 @@ td{
     margin-top: 5px;
 }
 
-.botoes 
-button {
+.botoes button {
     height: 100%;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.botoes 
-button:hover {
+.botoes button:hover {
     border: 1px solid black;
 }
 
@@ -222,7 +219,7 @@ footer {
     gap: 30px;
 }
 
-.footer-flex__listas{
+.footer-flex__listas {
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -231,4 +228,54 @@ footer {
 }
 
 
+@media (max-width:970px) {
 
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main h2 {
+        font-size: 18px;
+    }
+
+    main .section-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .main-flex {
+        width: 90%;
+    }
+
+    .nav-flex__links {
+        display: none;
+    }
+
+    .nav-flex__elements {
+        width: 90%;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        text-align: start;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .footer-flex {
+        font-size: 16px;
+        gap: 6px;
+    }
+
+    .footer-flex__listas {
+        font-size: 14px;
+        gap: 10px;
+    }
+}
