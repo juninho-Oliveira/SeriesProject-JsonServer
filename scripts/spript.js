@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
         editar.classList.add("bi", "bi-pencil-square");
         excluir.classList.add("bi", "bi-trash3");
 
-        excluir.addEventListener('click', function() {
+        excluir.addEventListener('click', function () {
           deleteSeries(series.id);
         })
 
-        editar.addEventListener('click', function() {
-         EditarSeries(series.id, series);
+        editar.addEventListener('click', function () {
+          EditarSeries(series.id, series);
         })
 
         //realizar a criação das celulas de cada elemento
@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         div.appendChild(excluir);
 
         listasSeries.appendChild(tr);
-        
+
       });
-  
+
     } catch (error) {
       console.log("deu erro " + error);
     }
@@ -72,20 +72,22 @@ document.addEventListener("DOMContentLoaded", (e) => {
 });
 
 
-/*function mostrarMenu() {
-  const menu = document.getElementById('menu-li');
-  let img = document.getElementById('img');
+function mostrarMenu() {
+  let menu = document.getElementById('icone');
+  let mostraMenu = document.getElementById('mostraIcons')
+
+  mostraMenu.style.display = (mostraMenu.style.display === "none" || mostraMenu.style.display === "") ? "flex" : "none";
 
 
-  menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "flex" : "none";
-
-  if para troca de imagem do menu
-  if (img.getAttribute("src") == "/assets/imagens/🦆 icon _share_.png") {
-    img.setAttribute("src", "/assets/imagens/🦆 icon _menu_.png");
-  } else {
-    img.setAttribute("src", "/assets/imagens/🦆 icon _share_.png");
+  if (mostraMenu.style.display === "flex") {
+    //alert('flex')
+    menu.classList.add('bi', 'bi-x-circle')
+    menu.classList.remove('bi', 'bi-card-list');
+  } else if (mostraMenu.style.display === "none") {
+    //alert('none')
+    menu.classList.add('bi', 'bi-card-list')
+    menu.classList.remove('bi', 'bi-x-circle');
   }
 
 }
 
-*/

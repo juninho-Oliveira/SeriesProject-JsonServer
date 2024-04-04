@@ -29,13 +29,28 @@
                     <li><a href="#footer">Contato</a></li>
                 </ul>
             </div>
+
+            <div class="container-menu">
+                <button onclick="mostrarMenu()">
+                    <i class="bi bi-card-list" id="icone"></i>
+                </button>
+            </div>
+
         </nav>
 
-        
+        <div class="nav-flex__links-mobile" id="menuLinks">
+            <ul class="nav-flex__links-list-mobile" id="mostraIcons">
+                <li><a href="#">Home</a></li>
+                <li><a href="#main">Conteudo</a></li>
+                <li><a href="#footer">Contato</a></li>
+            </ul>
+        </div>
+
+
     </header>
 
     <main id="main">
-        <h2 >Seja bem vindo ao sistema de cadastro de series</h2>
+        <h2>Seja bem vindo ao sistema de cadastro de series</h2>
 
         <section class="container-grid section-flex">
             <article class="main-flex">
@@ -51,7 +66,8 @@
 
                     <div class="main-flex__inputs">
                         <label for="">Informe a quantidade de temporadas</label>
-                        <input type="number" id="numTemporada" placeholder="Ex: 8" id="numTemporada" required min="1" max="20">
+                        <input type="number" id="numTemporada" placeholder="Ex: 8" id="numTemporada" required min="1"
+                            max="20">
                     </div>
 
                     <div class="main-flex__inputs">
@@ -61,7 +77,8 @@
 
                     <div class="main-flex__inputs">
                         <label for="">Informe o ano de lançamento</label>
-                        <input type="number" id="anoLancamento" placeholder="Ex: 2012" id="anoLancamento" required max="2024">
+                        <input type="number" id="anoLancamento" placeholder="Ex: 2012" id="anoLancamento" required
+                            max="2024">
                     </div>
 
                     <div class="main-flex__button">
@@ -92,7 +109,7 @@
                         </thead>
 
                         <tbody id="listaSeries">
-                                <!--quem vai criar os dados vai ser o javaScript
+                            <!--quem vai criar os dados vai ser o javaScript
                                 <td><i class="bi bi-pencil-square"></i></td>
                                 <td><i class="bi bi-trash3"></i></td>-->
                         </tbody>
