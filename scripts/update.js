@@ -5,6 +5,7 @@ function EditarSeries(id, series) {
   const nomeSerie = series;
   localStorage.setItem('meu id', ids)
   localStorage.setItem('meu nome', nomeSerie.nomeSeries)
+  
 
   window.location.href = "../Editar/editar.html"
 }

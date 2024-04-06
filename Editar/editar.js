@@ -3,10 +3,43 @@ let span = document.getElementById("nomeId");
 
 span.innerText = `${nome} !`;
 
+const url = "https://jsonserve-p8wz.onrender.com/series";
+
+
+async function mostrar() {
+
+  try {
+    const response = await fetch(url);
+    //console.log(response);
+    const dados = await response.json();
+
+    dados.forEach(e => {
+      document.getElementById("nomeSerie").value = e.nomeSeries;
+      document.getElementById("numTemporada").value = e.numTemporada;
+      document.getElementById("nomeEstudio").value = e.nomeEstudio;
+      document.getElementById("anoLancamento").value = e.anoLancamento;
+    });
+
+  } catch (error) {
+    console.log(`Erro ${error}`)
+  }
+
+}
+
+mostrar()
+
+
+
 //alert(nome);
+
+
 
 async function editar(nome, temporada, estudio, ano) {
   try {
+
+    
+
+
     const id = localStorage.getItem("meu id");
     //const nome = localStorage.getItem('meu nome');
     //alert(`meu id: ${id}, meu nome: ${nome}`)
@@ -18,6 +51,7 @@ async function editar(nome, temporada, estudio, ano) {
       anoLancamento: ano,
     };
 
+    
     if (true) {
       await fetch(`https://jsonserve-p8wz.onrender.com/series/${id}`, {
         method: "PUT",

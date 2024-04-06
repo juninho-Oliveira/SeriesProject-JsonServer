@@ -7,7 +7,6 @@ async function potsSeries(nome, temporada, estudio, ano) {
 
   //alert(` nome: ${nomeSeries}, temporada: ${numTemporada}, estudio: ${nomeEstudio}, ano: ${anoLancamento} `);
     
-
   try {
     const dadosEnviados = {
       nomeSeries: nome,
