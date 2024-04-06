@@ -203,7 +203,9 @@ td {
     border: 1px solid black;
 }
 
-
+th {
+    font-size: 15px;
+}
 
 
 footer {

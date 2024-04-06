@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         tr.appendChild(nomeSerie);
         tr.appendChild(numTemporada);
+        tr.appendChild(nomeEstudio)
         tr.appendChild(anoLancamento);
 
         tr.appendChild(div);
